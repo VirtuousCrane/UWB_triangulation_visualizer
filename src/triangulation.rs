@@ -1,4 +1,8 @@
+use std::collections::HashMap;
+
 use turtle::Point;
+
+use crate::TagData;
 
 pub fn triangulate_coordinate(distance_between_anchors: f64, tag_to_anchor_1: f64, tag_to_anchor_2: f64) -> Point {
     let a = distance_between_anchors;
@@ -12,4 +16,4 @@ pub fn triangulate_coordinate(distance_between_anchors: f64, tag_to_anchor_1: f6
     Point { x, y }
 }
 
-pub fn update_position() {}
+pub fn update_position(anchors: &HashMap<String, TagData>) {}
