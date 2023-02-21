@@ -3,6 +3,15 @@
 version = 3
 
 [[package]]
+name = "UWB_triangulation_visualizer"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "turtle",
+]
+
+[[package]]
 name = "ab_glyph_rasterizer"
 version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1895,15 +1904,6 @@ dependencies = [
  "svg",
  "thiserror",
  "tokio",
-]
-
-[[package]]
-name = "turtle_test"
-version = "0.1.0"
-dependencies = [
- "serde",
- "serde_json",
- "turtle",
 ]
 
 [[package]]

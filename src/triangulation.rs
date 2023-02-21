@@ -46,7 +46,7 @@ impl Triangulator {
     }
     
     pub fn update_anchor_info(&mut self, tag_data: TagData) {
-        if self.anchor_names.len() >= 2 {
+        if !self.anchor_names.contains(&tag_data.source) && self.anchor_names.len() >= 2 {
             println!("Cannot use more than 2 anchors");
             return;
         }
@@ -77,7 +77,7 @@ impl Triangulator {
                 let y_offset = (canvas_size.height - 200) as f64 / 2.0;
                 
                 let scaled_pos = Point {
-                    x: x_offset + pos.x * scale,
+                    x: -1.0 * (x_offset + pos.x * scale),
                     y: y_offset - pos.y * scale,
                 };
                 
